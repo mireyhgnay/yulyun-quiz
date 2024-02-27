@@ -30,3 +30,14 @@
 - React
 - Styled-Component
 - json
+
+<br>
+<br>
+
+## 🔥 Start
+
+```bash
+cd quiz
+npm i
+npm start
+```
