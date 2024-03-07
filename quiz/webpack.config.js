@@ -31,6 +31,20 @@ module.exports = {
         exclude: /node_modules/, // node_modules는 대상에서 제외
         loader: 'babel-loader', // 바벨 로더 추가
       },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              // Prefer `dart-sass`
+              implementation: require('sass'),
+            },
+          },
+        ],
+      },
     ],
   },
 };
