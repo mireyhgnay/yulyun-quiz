@@ -1,3 +1,23 @@
-body {
-  background: red;
+.container {
+  position: relative;
+  max-width: 500px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #f4d160;
 }
+
+// 로딩 스피너
+.loading {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  } //.loading_bar
+}
+
