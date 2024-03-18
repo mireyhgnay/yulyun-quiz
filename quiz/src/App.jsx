@@ -1,24 +1,29 @@
 import React, { useState } from 'react';
-import './styles/main.scss';
+import styled from 'styled-components';
 
-import { BarLoader } from 'react-spinners';
+import Loading from './pages/Loading';
+
+const Container = styled.div`
+  position: relative;
+  max-width: 500px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #f4d160;
+`;
 
 export default function App() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <div className="container">
+    <Container>
       {
         loading
           ? (
-            <section className="loading">
-              <BarLoader loading={loading} color="#fff" className="loading_bar" />
-            </section>
+            <Loading />
           ) : (
             <div>메인페이지 화면!</div>
           )
       }
-    </div>
-
+    </Container>
   );
 }
